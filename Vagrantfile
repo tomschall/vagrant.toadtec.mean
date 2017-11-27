@@ -9,9 +9,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # box to build virtual evironment to build off of.
   config.vm.box = "CentOS-7-x86_64-v20171127"
-  config.vm.box_download_checksum = "cf92ef32edf0f8e4ab45bcab1bc79277f58c67ff86aab55b5230199297cfffb5"
-  config.vm.box_download_checksum_type = "sha256"
-  config.vm.box_url = "https://www.dropbox.com/s/4yk8dhopfk6cwoe/CentOS-7-x86_64-v20171127.box"
+  # config.vm.box_download_checksum = "cf92ef32edf0f8e4ab45bcab1bc79277f58c67ff86aab55b5230199297cfffb5"
+  # config.vm.box_download_checksum_type = "sha256"
+  # config.vm.box_url = "https://www.dropbox.com/s/4yk8dhopfk6cwoe/CentOS-7-x86_64-v20171127.box"
     
   # set auto_update to false, if you do NOT want to check the correct
   # additions version when booting this machine
@@ -37,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "--memory", "4096",
         "--cpus", "2",
         "--cpuexecutioncap", "90",
-        "--name", "ch.netcase.vagrant"
+        "--name", "local.www.toadtec.ch"
     ]
   end
 
