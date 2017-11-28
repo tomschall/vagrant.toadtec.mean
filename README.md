@@ -14,6 +14,11 @@ Installation
 vagrant box add CentOS-7-x86_64-v20171127 /path/to/box/CentOS-7-x86_64-v20171127.box
 ```
 
+###### Install Vagrant Plugin Hostmanager
+```Shell
+vagrant plugin install vagrant-vbguest
+```
+
 ###### Start box 
 ```Shell
 vagrant up
