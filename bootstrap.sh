@@ -10,6 +10,10 @@ echo "Setting Firewall - Opening Ports"
 echo "3000, 4200, 5000, 1337, 27017 for Development"
 echo "============================================="
 sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=4200/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=5000/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=1337/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=27017/tcp --permanent
 sudo firewall-cmd --reload
 
 # Some of the Node.js modules that we'll be installing will require Sass, a CSS extension language. # Install it using gem, Ruby's package manager.
@@ -59,8 +63,6 @@ sudo npm install -g nodemon
 # cd ~/meanjs
 # npm install
 # npm start
-
-nodemon /vagrant/node/app.js
 
 echo ""
 echo "=========================================="

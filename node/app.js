@@ -1,6 +1,18 @@
-var http = require('http');
+// content of index.js
+const http = require('http');
+const port = 3000;
 
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello World!');
-}).listen(3000);
+const requestHandler = (request, response) => {
+  console.log(request.url)
+  response.end('Your Node.js Server is up!')
+};
+
+const server = http.createServer(requestHandler);
+
+server.listen(port, (err) => {
+  if (err) {
+    return console.log('something bad happened', err);
+  }
+
+  console.log(`server is listening on ${port}`);
+});

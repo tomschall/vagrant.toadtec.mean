@@ -97,6 +97,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     | IP:         179.16.0.60 \n \
     | Hostname:   local.www.toadtec.ch \n \
     | Open Ports: 3000, 4200, 5000, 1337, 27017 \n \
+    | Test your Server: nodemon /vagrant/node/app.js \n \
+    | Open URL in Browser: http://local.www.toadtec.ch:3000 \n \
     | \n \
     =========================================================================== "
 
