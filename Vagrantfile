@@ -92,12 +92,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.post_up_message = " \
     =========================================================================== \n \
-    |
-    | TOADTEC MEAN STACK
+    | \n \
+    | TOADTEC MEAN STACK \n \
     | IP:         179.16.0.60 \n \
     | Hostname:   local.www.toadtec.ch \n \
-    | Open Ports: 3000, 4200, 5000, 1337, 27017
-    | 
+    | Open Ports: 3000, 4200, 5000, 1337, 27017 \n \
+    | \n \
     =========================================================================== "
 
 end

@@ -6,6 +6,9 @@ echo "=========================================="
 sudo yum install -y git fontconfig bzip2 libpng-devel ruby ruby-devel
 
 # Setting Firewall Ports 3000, 4200, 5000, 1337, 27017 for Development and Reload Firewall
+echo "Setting Firewall - Opening Ports"
+echo "3000, 4200, 5000, 1337, 27017 for Development"
+echo "============================================="
 sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
 sudo firewall-cmd --reload
 
@@ -56,6 +59,8 @@ sudo npm install -g nodemon
 # cd ~/meanjs
 # npm install
 # npm start
+
+nodemon /vagrant/node/app.js
 
 echo ""
 echo "=========================================="
