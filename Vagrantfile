@@ -48,7 +48,23 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network :forwarded_port, guest: 3000, host: 3000 
+  # config.vm.network :forwarded_port, guest: 3000, host: 3000
+    
+  # Forward all ports in 'dev_ports' to the host machine
+  # 'auto_correct' is used to resolve any possible conflicts.
+  dev_ports = [
+    # Node JS
+    3000,
+    4200,
+    5000,
+    1337,
+    # Mongo DB
+    27017
+  ]
+    
+  dev_ports.each do |p|
+    config.vm.network 'forwarded_port', guest: p, host: p, auto_correct: true
+  end
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -77,9 +93,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.post_up_message = " \
     =========================================================================== \n \
     |
-    | WELCOME TO THE TOADTECHNOLOGIES MEAN STACK
+    | TOADTEC MEAN STACK
     | IP:         179.16.0.60 \n \
-    | Default:    \n     |     - local.www.toadtec.ch \n \
+    | Hostname:   local.www.toadtec.ch \n \
+    | Open Ports: 3000, 4200, 5000, 1337, 27017
     | 
     =========================================================================== "
 
