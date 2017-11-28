@@ -29,11 +29,6 @@ sudo touch /etc/yum.repos.d/mongodb-org-3.4.repo
 sudo chmod 766 /etc/yum.repos.d/mongodb-org-3.4.repo
 
 cat > /etc/yum.repos.d/mongodb-org-3.4.repo <<EOF
-
-sudo rm /etc/mongod.conf
-sudo mv mongod.conf /etc/mongod.conf
-sudo rm mongod.conf
-
 [mongodb-org-3.4]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/7Server/mongodb-org/3.4/x86_64/
@@ -43,6 +38,10 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 EOF
 
 sudo yum install -y mongodb-org
+
+sudo rm /etc/mongod.conf
+sudo mv /vagrant/mongod.conf /etc/mongod.conf
+
 sudo service mongod start
 sudo chkconfig mongod on
 sudo systemctl status mongod
