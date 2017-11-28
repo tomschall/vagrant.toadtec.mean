@@ -59,7 +59,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     5000,
     1337,
     # Mongo DB
-    27017
+    27017,
+    28017
   ]
     
   dev_ports.each do |p|
