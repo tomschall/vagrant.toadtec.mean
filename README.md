@@ -6,12 +6,35 @@ Sets up a CentOS-7-x86_64-v20171127 box with the latest node.js, MongoDB, grunt,
 
 Follow installation guide on http://docs.vagrantup.com/v2/installation/index.html to install Vagrant and VirtualBox
 
+Installation
+===================
+
+###### Download box and add to your boxes
+```Shell
+vagrant box add CentOS-7-x86_64-v20171127 /path/to/box/CentOS-7-x86_64-v20171127.box
+```
+
+###### Start box 
+```Shell
+vagrant up
+```
+
 Control Vagrant
 ===================
 
 ###### Start box
 ```Shell
 vagrant up
+```
+
+###### Suspend box
+```Shell
+vagrant suspend
+```
+
+###### Halt box
+```Shell
+vagrant halt
 ```
 
 ###### SSH into box
